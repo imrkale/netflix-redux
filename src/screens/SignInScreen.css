@@ -1,0 +1,60 @@
+.signInScreen{
+    position: absolute;
+    z-index: 2;
+    color: white;
+    background-color: #010101;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    margin:75vh;
+}
+.signInForm{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.signInForm > input{
+    margin: 8px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 3px;
+    background-color: #333333;
+    outline: none;
+    color: white;
+    width: 32vh;
+    
+}
+.signInForm > input:hover::placeholder{
+    font-size: 10px;
+    transition: all 0.4s ease-in-out;
+    
+    transform: translateY(-10px);
+}
+.signInForm > input:hover{
+    
+}
+.signInForm > .buttonSignIn{
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 10px;
+    background-color: #E50914;
+}
+.signInForm > h3{
+    text-align: center;
+    text-transform: lowercase;
+}
+.signInForm > .google_SignIn{
+    padding: 12px;
+    border: none;
+    border-radius: 3px;
+    background-color: #0a8d48;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+}
