@@ -39,6 +39,7 @@ function Row({title,fetchURL,isLargeRow}) {
                 const urlParams=new URLSearchParams(new URL(url).search);
                 setTrailerUrl(urlParams.get("v"));
             }).catch((error)=>console.log(error));
+            console.log(trailerUrl)
         }
     }
 
