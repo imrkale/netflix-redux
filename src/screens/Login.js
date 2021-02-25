@@ -9,7 +9,7 @@ function Login() {
                 <img className="login_logo"
                 src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
                 alt="Login Screen Logo"/>
-                <button onClick={()=>setSignIn(true)} className="login_button">Sign Up</button>
+                <button onClick={()=>setSignIn(true)} className="login_button">Sign In</button>
                 <div className="gradient"></div>
                 {signIn?(<SignInScreen/>):
                 (

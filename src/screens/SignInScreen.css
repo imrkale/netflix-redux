@@ -33,6 +33,9 @@
 .signInForm > input:hover{
     
 }
+.signInForm > button{
+    cursor: pointer;
+}
 .signInForm > .buttonSignIn{
     margin-top: 20px;
     padding: 12px;
@@ -57,4 +60,14 @@
     font-weight: 600;
     font-size: 14px;
     color: white;
+}
+.signInForm > h6:hover{
+    cursor: pointer;
+}
+.signInForm > h6{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.signInForm > h6 > span{
+    margin-left: 12vh;
 }
