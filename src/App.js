@@ -4,6 +4,7 @@ import HomeScreen from './screens/HomeScreen'
 import {auth,provider} from './firebase'
 import {useDispatch,useSelector} from 'react-redux'
 import {login, logout, selectUser} from './features/userSlice'
+import ProfileScreen from './screens/ProfileScreen'
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,20 +28,24 @@ function App() {
       }
       else{
         alert("User not logged In")
-        dispatch(logout);
+        dispatch(logout());
       }
     });
     return unsubscribe;
-  }, [])
+  }, [dispatch])
   return (
     <>
     {!user?(<Login/>):
     <div className="app">
     <Router>
      <Switch>
-       <Route path="/">
+     <Route path="/profile">
+         <ProfileScreen/>
+       </Route>
+       <Route exact path="/">
          <HomeScreen/>
        </Route>
+       
      </Switch>
   </Router>
   </div>}
