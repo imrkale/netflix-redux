@@ -73,6 +73,10 @@
     opacity: 1;
     transition: all 0.2s ease-in-out;
 }
+.profileScreen_plans > .plansList > .planslist_no:hover > div >span{
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
 .profileScreen_plans > .plansList > .planslist_no{
     display: flex;
     justify-content: space-between;

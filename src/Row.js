@@ -1,11 +1,15 @@
-import React, {useState,useEffect} from 'react'
+import React, {useState,useEffect,useRef} from 'react'
 import axios from './axios'
 import './Row.css'
 import Youtube from 'react-youtube'
 import movieTrailer from 'movie-trailer';
+import {TimelineLite ,TweenMax, Power3,TimelineMax} from 'gsap';
+import ScrollMagic from 'scrollmagic'
 
 function Row({title,fetchURL,isLargeRow}) {
-
+    let images = useRef(null)
+    let app = useRef(null)
+    // let tl = new TimelineLite();
     const base_url="https://image.tmdb.org/t/p/original/";
     const [trailerUrl,setTrailerUrl]=useState("");
     const [movies,setMovies]=useState([]);
@@ -42,19 +46,28 @@ function Row({title,fetchURL,isLargeRow}) {
             console.log(trailerUrl)
         }
     }
-
+    let tl = new TimelineMax();
+    let t2 = new TimelineMax();
+    useEffect(() => {
+        // TweenMax.to(app, 0, {css: {visibility: 'visible'}})
+        tl.to(app,1.5,{scale:1,ease:Power3.easeOut});
+       
+        const controller = new ScrollMagic.Controller();
+        t2.to(images,1.5,{scale:1,ease:Power3.easeOut},"=1.5");
+        
+    }, [])
 
     return (
 
             <div className="row">
 
 
-                <h1>{title}</h1>
-
-                <div className="row_posters">
+                <h1 ref={el=>{app=el}}>{title}</h1>
+                
+                <div className="row_posters" ref={el=>{images=el}}>
                     {movies.map(movie=>(
 
-                        <img key={movie.id} onClick={()=>handleClick(movie)} className={`row_poster ${isLargeRow && 'row_posterLarge'}`} src={`${base_url}${isLargeRow? movie.poster_path:movie.backdrop_path}`} alt={movie.name}/>
+                        <img  key={movie.id} onClick={()=>handleClick(movie)} className={`row_poster ${isLargeRow && 'row_posterLarge'}`} src={`${base_url}${isLargeRow? movie.poster_path:movie.backdrop_path}`} alt={movie.name}/>
                     
                     ))}
                 </div>

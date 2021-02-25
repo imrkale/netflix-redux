@@ -4,11 +4,13 @@
   }
   .row > h1 {
     padding-top: 10px;
+    transform: scale(0);
   }
   .row_posters {
     display: flex;
     overflow-x: scroll;
     padding: 25px;
+    transform: scale(0.5);
   }  
   .row_posters::-webkit-scrollbar {
     display: none;
@@ -20,6 +22,7 @@
     object-fit: contain; /* this will keep the aspect ratio means we can zoom in or out it will be clearer */
     transition: transform 450ms; /* for smooth hovering */
     margin-right: 10px;
+    /* transform: scale(0.5); */
   }
   
   .row_poster:hover {
