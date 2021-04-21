@@ -1,3 +1,18 @@
+
+LOGIN SCREEN
+![login](https://user-images.githubusercontent.com/61581525/115564429-12614e00-a2d6-11eb-93cc-2567e40ee75e.PNG)
+
+SIGN In SCREEN
+![signin](https://user-images.githubusercontent.com/61581525/115564439-155c3e80-a2d6-11eb-99ef-b14d6b404813.PNG)
+
+PROFILE SCREEN
+![profile](https://user-images.githubusercontent.com/61581525/115564451-17be9880-a2d6-11eb-9cde-d33ac3c58491.PNG)
+
+Watch The Trailer 😍
+![tra](https://user-images.githubusercontent.com/61581525/115564863-800d7a00-a2d6-11eb-821e-eb8769ad875f.PNG)
+
+HOME PAGE
+![home](https://user-images.githubusercontent.com/61581525/115564460-19885c00-a2d6-11eb-902a-578346724ecd.PNG)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
